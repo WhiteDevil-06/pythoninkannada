@@ -26,8 +26,8 @@ def add():
         t.sleep(0.5)
         add()
     elif(2==a1):
-        n1 = int(input("Enter 1st Number: "))
-        n2 = int(input("Enter 2nd Number: "))
+        n1 = float(input("Enter 1st Number: "))
+        n2 = float(input("Enter 2nd Number: "))
         print("Calculating...")
         t.sleep(0.5)
         print("Sum =", n1+n2)
@@ -52,8 +52,8 @@ def sub():
         print("Please Re-enter")
         sub()
     elif(2==a1):
-        n1 = int(input("Enter 1st Number: "))
-        n2 = int(input("Enter 2nd Number: "))
+        n1 = float(input("Enter 1st Number: "))
+        n2 = float(input("Enter 2nd Number: "))
         print("Calculating...")
         t.sleep(0.5)        
         print("Difference =", n1-n2)
@@ -78,8 +78,8 @@ def mul():
         print("Please Re-enter")
         sub()
     elif(2==a1):
-        n1 = int(input("Enter 1st Number: "))
-        n2 = int(input("Enter 2nd Number: "))
+        n1 = float(input("Enter 1st Number: "))
+        n2 = float(input("Enter 2nd Number: "))
         print("Calculating...")
         t.sleep(0.5)
         print("Product =", n1*n2)
@@ -104,8 +104,8 @@ def div():
         print("Please Re-enter")
         sub()
     elif(2==a1):
-        n1 = int(input("Enter 1st Number: "))
-        n2 = int(input("Enter 2nd Number: "))
+        n1 = float(input("Enter 1st Number: "))
+        n2 = float(input("Enter 2nd Number: "))
         print("Calculating...")
         t.sleep(0.5)        
         print("Quotient =", n1/n2)
@@ -117,10 +117,9 @@ def div():
             li_divi.append(float(input()))
         print("Calculating...")
         t.sleep(0.5)
-        divi = 1
-        divi = li_divi[0]/divi
+        divi = li_divi[0]
         for val in range(1,len(li_divi)):
-            divi /= val 
+            divi = divi/li_divi[val]
         print("Quotient:", divi)
         q()
     
@@ -134,5 +133,8 @@ def q():
         print("Thank you for using our service.")
         t.sleep(0.5)
         exit()
+    else:
+        print("Invalid Option, Try Again...")
+        q()
 
 func()
